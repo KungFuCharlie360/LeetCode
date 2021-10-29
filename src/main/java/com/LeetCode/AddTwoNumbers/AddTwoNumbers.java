@@ -38,7 +38,7 @@ public class AddTwoNumbers {
         }
         return first;
     }
-    
+
     public static void main(String[] args) {
         ListNode ans = new ListNode();
 
