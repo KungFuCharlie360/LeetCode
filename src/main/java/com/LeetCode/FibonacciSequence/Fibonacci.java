@@ -18,6 +18,22 @@ public class Fibonacci {
         return fib(n - 1) + fib(n - 2);
     }
 
+    public int climbStairs(int n) {
+        if (n <= 1)
+            return 1;
+        return climbStairs(n - 1) + climbStairs(n - 2);
+    }
+
+    public int climbStairsNew(int n) {
+        int[] ways = new int[50];
+        ways[0] = 1;
+        ways[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            ways[i]=ways[i-1]+ways[i-2];
+        }
+        return ways[n];
+    }
+
     public static void main(String[] args) {
         Fibonacci fibonacci = new Fibonacci();
         System.out.println(fibonacci.fib(4));
